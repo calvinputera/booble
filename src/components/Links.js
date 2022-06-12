@@ -14,7 +14,7 @@ const Links = () => {
       {links.map(({ url, text }) => (
         <NavLink
           to={url}
-          activeClassName="text-blue-700 border-b-2 dark:text-blue-300 border-blue-700 pb-2"
+          className="focus:text-blue-700 focus:border-blue-700 border-b dark:border-b-gray-800 dark:focus:border-b-blue-400 dark:text-gray-400 dark:focus:text-blue-400 pb-2"
         >
           {text}
         </NavLink>

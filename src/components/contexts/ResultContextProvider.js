@@ -24,7 +24,15 @@ export const ResultContextProvider = ({ children }) => {
     const data = await response.json();
     // console.log(data);
 
-    setResult(data);
+    if (type.includes("/news")) {
+      setResult(data.entries);
+    } else if (type.includes("/image")) {
+      setResult(data.image_results);
+    } else {
+      setResult(data.results);
+    }
+
+    // setResult(data); //can be to turnOff
     setIsLoading(false);
   };
 
